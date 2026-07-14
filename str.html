@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Layout Engines</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* 1. HEADER: Flexbox Example */
+        .navbar {
+            /* Defines the layout configuration as a 1D flex container */
+            display: flex; 
+            
+            /* Defines the direction child elements flow (horizontally) */
+            flex-direction: row; 
+            
+            /* Aligns items horizontally: pushes Logo to far left, Nav links to far right */
+            justify-content: space-between; 
+            
+            /* Aligns items vertically: perfectly centers the text links with the logo */
+            align-items: center; 
+            
+            background-color: #1e293b;
+            color: white;
+            padding: 15px 30px;
+        }
+
+        /* Inline-block vs Inline vs Block Demonstration */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            /* inline-block lets us apply horizontal padding while keeping it on one line */
+            display: inline-block; 
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        /* 2. MAIN CONTAINER: CSS Grid Example */
+        .dashboard {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+
+            /* Defines the layout configuration as a 2D grid container */
+            display: grid;
+
+            /* Defines column structure: 3 columns, each taking up 1 fraction of free space */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* Defines row structure: 2 rows, each exactly 180 pixels tall */
+            grid-template-rows: repeat(2, 180px);
+
+            /* Defines a uniform spacing of 20px between all rows and columns */
+            gap: 20px;
+        }
+
+        /* --- CARD STYLING --- */
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            
+            /* Turning cards into flex columns to space out the card text cleanly */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            color: #1e293b;
+        }
+
+        .card p {
+            color: #64748b;
+            /* standard text behaves like an inline/block hybrid natively */
+            display: block; 
+        }
+
+        /* 
+           3. SPECIAL UTILITY: display */
+        .hidden-notice {
+            /* Completely removes this element from the page layout structure */
+            display: none; 
+            background-color: #fef08a;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Utility Element: Currently Hidden -->
+    <div class="hidden-notice">
+        System Maintenance Notice. (You can't see me because of display: none!)
+    </div>
+
+    <!-- NAVBAR: Controlled by Flexbox -->
+    <header class="navbar">
+        <div class="logo">DevPortal</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Settings</a>
+        </nav>
+    </header>
+
+    <!-- DASHBOARD: Controlled by CSS Grid -->
+    <main class="dashboard">
+        <div class="card">
+            <h3>Project Full Stack</h3>
+            <p>Active web development sprint tracker.</p>
+        </div>
+        <div class="card">
+            <h3>Project Web Development</h3>
+            <p>UI redesign exploration architecture.</p>
+        </div>
+        <div class="card">
+            <h3>Project Alpha</h3>
+            <p>Database synchronization systems.</p>
+        </div>
+        <div class="card">
+            <h3>Analytics</h3>
+            <p>User engagement metrics dashboard data.</p>
+        </div>
+        <div class="card">
+            <h3>Security</h3>
+            <p>Access control logs and active firewalls.</p>
+        </div>
+        <div class="card">
+            <h3>Server Status</h3>
+            <p>All core computational nodes operational.</p>
+        </div>
+    </main>
+
+</body>
+</html>
