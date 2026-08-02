@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal</title>
+</head>
+<body>
+
+    
+    <header>
+        <img src="anits.jpg" alt="College Logo" width="100" height="100">
+        <h1>Welcome to Anil Neerukonda Institute of Technology and Sciences</h1>
+        <p>Empowering Innovation and Excellence since <sup>2001</sup></p>
+    </header>
+
+    <hr>
+
+    <nav>
+        <a href="[google.com](https://www.google.com)" target="_blank">Google Search</a> | 
+        <a href="[anits.edu.in](https://anits.edu.in)" target="_blank">Official College Website</a>
+    </nav>
+
+    <hr>
+
+    
+    <main>
+
+        <!-- Part A & D: Article with Text Formatting and Lists -->
+        <article>
+            <h2>About Our Campus</h2>
+            <p>
+                Our institution provides <b>world-class education</b> with a focus on <i>practical learning</i>. 
+                We are <u>accredited with Grade A+</u> by NAAC.
+            </p>
+
+            <h3>Key Highlights (Unordered List)</h3>
+            <ul>
+                <li>Global Exchange Programs</li>
+                <li>100% Placement Assistance</li>
+            </ul>
+
+            </ol>
+        </article>
+
+        <hr>
+
+        <!-- Part B: Images and Table -->
+        <section>
+            <h2>Campus Life & Student Directory</h2>
+            
+            <img src="https://www.anits.org/static/images/campus.jpg" alt="Anil Neerukonda Institute Campus Building" width="400">
+
+            <h3>Student Details</h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Roll Number</th>
+                        <th>Name</th>
+                        <th>Branch</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A24126552089</td>
+                        <td>Koyya Appala Reddy</td>
+                        <td>Computer Science</td>
+                        <td>koyyaappalareddy.24.csm@anits.edu.in</td>
+                    </tr>
+                    <tr>
+                        <td>A24126552106</td>
+                        <td>Maria Garcia</td>
+                        <td>Electronics</td>
+                        <td>maria.24.cam@.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Part D: Multimedia Elements -->
+        <section>
+            <h2>Campus Media</h2>
+            
+            <h3>College Anthem</h3>
+            <audio controls>
+                <source src="anthem.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Campus Tour Video</h3>
+            <video width="320" height="240" controls>
+                <source src="https://www.youtube.com/watch?v=O_vTVEAV10c" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- Part C & D: Registration Form with HTML5 Controls -->
+        <section>
+            <h2>Student Registration Form</h2>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob">
+                </p>
+
+                <p>
+                    <label for="age">Age:</label><br>
+                    <input type="number" id="age" name="age" min="17" max="60">
+                </p>
+
+                <p>
+                    Gender:<br>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </p>
+
+                <p>
+                    Hobbies:<br>
+                    <input type="checkbox" id="sports" name="hobbies" value="Sports">
+                    <label for="sports">Sports</label>
+                    <input type="checkbox" id="music" name="hobbies" value="Music">
+                    <label for="music">Music</label>
+                    <input type="checkbox" id="coding" name="hobbies" value="Coding">
+                    <label for="coding">Coding</label>
+                </p>
+
+                <p>
+                    <label for="branch">Select Branch:</label><br>
+                    <select id="branch" name="branch">
+                        <option value="CSE">Computer Science</option>
+                        <option value="ECE">Electronics & Communication</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <option value="CE">Civil Engineering</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="favcolor">Preferred ID Card Theme Color:</label><br>
+                    <input type="color" id="favcolor" name="favcolor" value="#0000ff">
+                </p>
+
+                <p>
+                    <label for="skill">Self-Assessed Skill Level (1-10):</label><br>
+                    <input type="range" id="skill" name="skill" min="1" max="10">
+                </p>
+
+                <p>
+                    <label for="comments">Comments / Statement of Purpose:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset Form">
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- Semantic Footer Element -->
+    <footer>
+        <p>&copy; 2026 Anil Neerukonda Institute of Technology and Sciences. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
