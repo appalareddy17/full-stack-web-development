@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My Styled Webpage</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column
+        }
+
+        header {
+            background: linear-gradient(90deg, #2c3e50, #4ca1af);
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .15)
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .5)
+        }
+
+        nav {
+            background-color: #1a252f;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 12px 24px;
+            margin: 0 8px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color .3s ease, color .3s ease
+        }
+
+        nav a:hover {
+            background-color: #e74c3c;
+            color: #fff
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex: 1
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            flex: 1 1 300px;
+            max-width: 360px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, .08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform .3s ease
+        }
+
+        .card:hover {
+            transform: translateY(-5px)
+        }
+
+        .card h2 {
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4ca1af;
+            padding-bottom: 8px
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px
+        }
+
+        .card-btn {
+            align-self: start;
+            background: linear-gradient(135deg, #4ca1af, #2c3e50);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: .95rem;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+            transition: all .3s ease
+        }
+
+        .card-btn:hover {
+            background: linear-gradient(135deg, #2c3e50, #1a252f);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, .3);
+            transform: scale(1.03)
+        }
+
+        canvas {
+            border: 2px dashed #4ca1af;
+            border-radius: 8px;
+            background-color: #fafafa;
+            display: block;
+            margin: 10px auto
+        }
+
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: .9rem
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Styled Webpage</h1>
+    </header>
+    <nav><a href="#home">Home</a><a href="#canvas">Canvas Art</a><a href="#about">About</a></nav>
+    <main class="container">
+        <article class="card" id="canvas">
+            <div>
+                <h2>HTML5 Canvas</h2>
+                <p>Dynamic 2D rendering area displaying simple shapes and text:</p><canvas id="myCanvas" width="280"
+                    height="180"></canvas>
+            </div><button class="card-btn">Explore Graphics</button>
+        </article>
+        <article class="card">
+            <div>
+                <h2>Modern Styling</h2>
+                <p>Utilizes CSS gradients, custom shadows, smooth hover transitions, and rounded corners to deliver a
+                    clean visual appearance.</p>
+            </div><button class="card-btn">Learn More</button>
+        </article>
+        <article class="card">
+            <div>
+                <h2>Responsive Design</h2>
+                <p>Built using Flexbox layouts, precise margins, padding, and explicit borders to ensure content adapts
+                    seamlessly across screen sizes.</p>
+            </div><button class="card-btn">View Details</button>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2026 My Styled Webpage | Designed with HTML5 &amp; CSS3</p>
+    </footer>
+    <script>const c = document.getElementById('myCanvas'), x = c.getContext('2d'); x.fillStyle = '#e74c3c', x.fillRect(20, 20, 90, 50), x.beginPath(), x.arc(210, 45, 30, 0, 2 * Math.PI), x.fillStyle = '#3498db', x.fill(), x.beginPath(), x.moveTo(20, 100), x.lineTo(260, 100), x.strokeStyle = '#2ecc71', x.lineWidth = 4, x.stroke(), x.font = 'bold 16px sans-serif', x.fillStyle = '#2c3e50', x.fillText('Name: Appala Reddy', 50, 145);</script>
+</body>
+</html>
